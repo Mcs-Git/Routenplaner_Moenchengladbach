@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='route.css') }}">
+    <title>Mönchengladbach – Route-Ergebnis</title>
+</head>
+<body>
+    <main>
+
+        <!-- Ergebnisbereich -->
+        <section class="form_section">
+            <section class="form_box">
+                    
+                    <div class="form_title">
+                        <h1>Routenplaner</h1>
+                        <h2>Mönchengladbach</h2>
+                    </div>
+                    <div class="form_text">
+                        <div>
+                            <p>Startpunkt: <strong>{{ "%.5f"|format(source[0]) }}, {{ "%.5f"|format(source[1]) }}</strong> </p>
+                            <p>Zielpunkt: <strong>{{ "{:.5f}".format(destination[0]) }}, {{ "{:.5f}".format(destination[1]) }}</strong></p>
+                            <p>Distanz: <strong>{{ total_distance }} km</strong> </p>
+                            <p>Reisezeit: <strong>{{ travel_time }} Minuten</strong></p>
+                        </div>
+                        <div class="return_button">
+                            <a href="{{ url_for('index') }}" class="return_link">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                                Zurück
+                            </a>
+                        </div>
+                    </div>
+            </section>
+        </section>
+
+        
+        <!-- Graph-Anzeige -->
+        <section class="graph_section">
+            <section class="graph">
+                <h1>Visualisierung der Strecke</h1>
+                <img src="{{ url_for('static', filename='graph/route_plot.svg') }}" alt="Routenbild">
+            </section>
+        </section>
+    </main>
+</body>
+</html>

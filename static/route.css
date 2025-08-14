@@ -1,0 +1,112 @@
+/* Textausgabe */
+p{
+    font-weight: 600;
+    font-size: larger;
+    color: #1A5D41;
+}
+
+strong{
+    font-weight: 500;
+}
+
+/* Rückkehr-Link */
+.return_link{
+    display: inline-flex;
+    align-items: center;
+    font-size: larger;
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+    gap: 10px;
+
+}
+
+/* SVG-Icon im Zurück-Button */
+.return_link svg{
+    width: 15px;
+    fill: #FFFFFF;
+    margin-bottom: 2px;
+}
+
+/* "Zurück"-Button-Styling */
+.return_button{
+    border-radius: 8px;
+    padding: 11px 15px;
+    background-color: #1A5D41;
+    margin-top: 35px;
+    display: flex;
+    width: fit-content;
+    align-self: baseline;
+
+}
+
+/* Hauptlayout */
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 20px 55px;
+    border: 1px solid #A5C79B;
+    border-radius: 10px;
+    background-color: #D9E8D3;
+    overflow: hidden;
+    width: fit-content;
+    height: fit-content;
+
+    
+}
+
+/* Ergebnisbereich (linke Spalte) */
+.form_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: fit-content;
+    border: none;
+}
+
+/* Form-Box im Ergebnisbereich */
+.form_box{
+    width: 100%;
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
+    padding-left: 0;
+    
+
+}
+
+/* Visualisierungsbereich (rechte Spalte) */
+.graph_section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+}
+
+/* SVG-Anzeige */
+.graph{
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    background-color: #D9E8D3;
+    border-left: 2px solid #A5C79B;
+    margin-left: 25px;
+    padding: 15px 0 15px 15px;
+}
+
+/* Body-Standard */
+body{
+    padding: 20px;
+    margin: 0;
+    overflow: visible;
+}
+
+/* Headline-Feinabstimmung */
+h1{
+    margin-top: 0;
+}

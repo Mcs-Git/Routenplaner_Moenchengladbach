@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Mönchengladbach – Routenberechnung</title>
+</head>
+<body>
+    <main>
+
+    <section class="form_box">
+        <div class="form_title">
+            <h1>Routenplaner</h1>
+            <h2>Mönchengladbach</h2>
+        </div>
+        <form action="{{ url_for('route') }}" method="POST">
+            <!-- Startkoordinaten -->
+            <label>Startpunkt (Länge & Breite):</label>
+            <input class="source" type="number" step="any" placeholder="z.B. 6.44613 (Längengrad)" name="source" required><br>
+            <input class="source" type="number" step="any" placeholder="z.B. 51.19649 (Breitengrad)" name="source" required><br>
+
+            <!-- Zielkoordinaten -->
+            <label>Zielpunkt (Länge & Breite):</label>
+            <input class="destination" type="number" step="any" placeholder="z.B. 6.44186 (Längengrad)" name="destination" required><br>
+            <input class="destination" type="number" step="any" placeholder="z.B. 51.17923 (Breitengrad)" name="destination" required><br>
+            <div class="button_box">
+                <input class="button" type="submit" value="Route berechnen">
+            </div>
+        </form>
+    </section>
+    </main>
+</body>
+</html>
